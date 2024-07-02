@@ -49,7 +49,7 @@ public class XCProjectFile {
   public let project: PBXProject
   let fields: Fields
   var format: PropertyListSerialization.PropertyListFormat
-  let allObjects = AllObjects()
+  public let allObjects = AllObjects()
 
   public convenience init(xcodeprojURL: URL, ignoreReferenceErrors: Bool = false) throws {
     let pbxprojURL = xcodeprojURL.appendingPathComponent("project.pbxproj", isDirectory: false)

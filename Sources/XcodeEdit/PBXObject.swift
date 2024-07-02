@@ -11,8 +11,8 @@ import Foundation
 public typealias Fields = [String: Any]
 
 public /* abstract */ class PBXObject {
-  internal var fields: Fields
-  internal let allObjects: AllObjects
+  public var fields: Fields
+  public let allObjects: AllObjects
 
   public let id: Guid
   public let isa: String

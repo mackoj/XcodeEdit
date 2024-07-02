@@ -61,9 +61,9 @@ public struct Reference<Value : PBXObject> : Hashable, Comparable {
 }
 
 public class AllObjects {
-  internal var objects: [Guid: PBXObject] = [:]
-  internal var fullFilePaths: [Guid: Path] = [:]
-  internal var refCounts: [Guid: Int] = [:]
+  public var objects: [Guid: PBXObject] = [:]
+  public var fullFilePaths: [Guid: Path] = [:]
+  public var refCounts: [Guid: Int] = [:]
 
   internal func createReferences<Value>(ids: [Guid]) -> [Reference<Value>] {
     return ids.map(createReference)
